@@ -1,0 +1,23 @@
+@model List<Productos>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Men's clothing</h1>
+</div>
+
+<div class="cards">
+
+@foreach(var Productos in Model) {
+    if(Productos.category == "men's clothing") {
+    <div class="text-center card-Container">
+        <p>@Productos.title</p>
+        <p>$@Productos.price</p>
+        <p>@Productos.category</p>
+        <img src=@Productos.image>
+    </div>
+    }
+}
+</div>

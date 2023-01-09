@@ -1,0 +1,31 @@
+﻿@model List<Productos>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">E-commerce</h1>
+</div>
+
+<div class="text-center link-Container">
+    <button> <a asp-controller="Home" asp-action="Men"> men´s clothing </a> </button>
+    <button> <a asp-controller="Home" asp-action="Women"> women´s clothing </a> </button>
+    <button> <a asp-controller="Home" asp-action="Electronics"> electronics </a> </button>
+    <button> <a asp-controller="Home" asp-action="Jewelery"> jewelery </a> </button>
+
+    <!-- <a asp-controller="Home" asp-action="Index"> <button> electronics </button> </a>
+    <a asp-controller="Home" asp-action="Index"> <button> women´s clothing </button> </a> -->
+</div>
+
+<div class="cards">
+
+@foreach(var Productos in Model) {
+    <div class="text-center card-Container">
+        <p>@Productos.title</p>
+        <p>$@Productos.price</p>
+        <p>@Productos.category</p>
+        <img src=@Productos.image>
+    </div>
+}
+</div>

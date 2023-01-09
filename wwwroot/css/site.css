@@ -1,0 +1,65 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  row-gap: 2.25rem;
+}
+
+.card-Container {
+  border: none;
+  background-color: rgba(255, 255, 255, 0.85);
+  width: 17rem;
+  border-radius: 10px;
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.2);
+  margin: 1rem auto;
+  color: #000;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-Container:hover {
+  transform: translateY(-0.7rem);
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.35);
+  transition: all 0.4s;
+  cursor: pointer;
+}
+
+.card-Container img {
+  width: 125px;
+  height: 125px;
+}
+
+.card-Container p {
+  margin-bottom: 0.5rem;
+}
+
+.link-Container a {
+  margin: 0 0.5rem;
+  text-decoration: none;
+  color: #000;
+}
